@@ -1,46 +1,37 @@
 {
-  "name": "chatgpt-mac",
-  "productName": "chatgpt-mac",
-  "version": "0.0.5",
-  "description": "Menubar app for ChatGPT",
+  "name": "chatgpt-menubar",
+  "productName": "ChatGPT-MenuBar",
+  "version": "1.0.1",
+  "description": "A lightweight desktop menu bar application that opens the web-based ChatGPT interface while respecting OpenAI's embedding restrictions.",
   "main": "index.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package --arch arm64,x64",
-    "make": " electron-forge make --arch arm64,x64",
-    "publish": "electron-forge publish --arch arm64,x64",
-    "lint": "echo \"No linting configured\""
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [
-    "chatgpt",
-    "openai",
-    "mac"
+    "ChatGPT",
+    "Electron",
+    "menu bar",
+    "macOS"
   ],
-  "author": {
-    "name": "Vince Loewe",
-    "email": "vince@lyser.io"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "electron-context-menu": "^3.6.0",
-    "menubar": "^9.2.3",
-    "nucleus-analytics": "^4.0.3",
-    "update-electron-app": "^2.0.1"
-  },
+  "author": "Robi750",
+  "license": "Robi750 Software License",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vincelwt/chatgpt-mac"
+    "url": "https://github.com/robi750/ChatGPT-MenuBar.git"
+  },
+  "homepage": "https://github.com/robi750/ChatGPT-MenuBar",
+  "bugs": {
+    "url": "https://github.com/robi750/ChatGPT-MenuBar/issues"
+  },
+  "config": {
+    "forge": "./forge.config.js"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.4",
-    "@electron-forge/maker-deb": "^6.0.4",
-    "@electron-forge/maker-dmg": "^6.0.4",
-    "@electron-forge/maker-rpm": "^6.0.4",
-    "@electron-forge/maker-squirrel": "^6.0.4",
-    "@electron-forge/maker-zip": "^6.0.4",
-    "@electron-forge/publisher-github": "^6.0.4",
-    "dotenv": "^16.0.3",
-    "electron": "^21.0.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "@electron-forge/cli": "^6.0.0",
+    "@electron-forge/maker-dmg": "^6.0.0",
+    "@electron-forge/maker-zip": "^6.0.0",
+    "electron": "^25.2.0"
   }
 }

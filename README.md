@@ -1,28 +1,51 @@
-⭐ Building in AI? My new project is an [open-source toolkit for AI devs](https://github.com/llmonitor/llmonitor), a star would mean the world ⭐
+🤖 ChatGPT MenuBar App 🤖
 
----
+A lightweight desktop menu bar application that opens the web-based ChatGPT interface while respecting OpenAI's embedding restrictions.
+The app opens ChatGPT in a compact window from your system tray or menu bar, allowing you to use it without keeping a full browser open.
 
-# ChatGPT for desktop
+Originally forked from vincelwt/chatgpt-mac, but most of the code has been rewritten and redesigned.
 
-This is a simple app that makes ChatGPT live in your menubar.
 
-You can use Cmd+Shift+G (Mac) or Ctrl+Shift+G (Win) to quickly open it from anywhere.
+Features ⭐
 
-Download:
+- Menu bar / system tray access
+- Lightweight desktop wrapper
+- Quick access without opening a full browser
+- Simple installation
+- Menu bar / system tray access
 
-- [Mac Arm64 .dmg](https://github.com/vincelwt/chatgpt-mac/releases/download/v0.0.5/ChatGPT-0.0.5-arm64.dmg)
-- [Mac Intel .dmg](https://github.com/vincelwt/chatgpt-mac/releases/download/v0.0.5/ChatGPT-0.0.5-x64.dmg)
 
-No Windows binaries currently offered. Clone the repo, npm install electron-forge and run.
+Installation 💾
 
-<p align="center">
-  <img src="./images/screenshot.jpeg" width="500">
-</p>
+Download the latest release from the Releases section.
 
-## Credit
+Mac
+-Open the .dmg file and drag the application into your Applications folder.
 
-All credit and copyrights goes to OpenAI.
+⚠️ Currently, this app is macOS-only. It is not packaged for Windows.
 
-## Author
+Development 🛠️
 
-You can find me on Twitter [@vincelwt](https://twitter.com/vincelwt).
+Clone the repository:
+
+git clone https://github.com/robi750/ChatGPT-MenuBar.git
+cd ChatGPT-MenuBar
+
+Install dependencies:
+npm install
+
+Run the application:
+npm start
+
+Build the desktop package:
+npm run make
+
+License 📄
+This project is free to download, use, and share.
+
+Commercial companies may use the application internally, but the packaged application itself may not be sold or redistributed for profit.
+
+See the LICENSE file for details.
+
+Author
+Robi750
