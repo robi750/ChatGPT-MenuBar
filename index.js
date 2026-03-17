@@ -21,26 +21,40 @@ app.on('ready', () => {
     resizable: true,
     alwaysOnTop: true,
     webPreferences: {
-      nodeIntegration: false
+      nodeIntegration: false,
+      contextIsolation: true
     }
   });
 
   // Keep window on all desktops / spaces
   win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
 
+  // Load ChatGPT
   win.loadURL('https://chat.openai.com/');
+
+  // Fix zoom & padding to prevent list numbers being cut off
+  win.webContents.on('did-finish-load', () => {
+    win.webContents.setZoomLevel(-1); // slightly smaller
+    win.webContents.insertCSS(`
+      body {
+        padding-left: 8px !important;
+      }
+      ol, ul {
+        margin-left: 8px !important;
+      }
+    `);
+  });
 
   // Left-click: toggle ChatGPT window
   tray.on('click', () => {
     if (win.isVisible()) {
       win.hide();
     } else {
-      // Get primary display bounds
       const display = screen.getPrimaryDisplay();
       const { width: screenWidth } = display.workArea;
 
       // Position top-right corner
-      const x = screenWidth - win.getBounds().width - 10; // 10px margin from right
+      const x = screenWidth - win.getBounds().width - 10; // 10px margin
       const y = 10; // 10px margin from top
       win.setBounds({ x, y, width: 500, height: 630 });
       win.show();
