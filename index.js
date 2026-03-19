@@ -14,7 +14,7 @@ app.on('ready', () => {
 
   // Create hidden BrowserWindow
   win = new BrowserWindow({
-    width: 500,  // requested width
+    width: 630,  // requested width
     height: 630, // requested height
     show: false,
     frame: false,
