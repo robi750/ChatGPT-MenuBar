@@ -47,6 +47,5 @@ Commercial companies may use the application internally, but the packaged applic
 
 See the LICENSE file for details.
 
-Author: Robi750
-
-Ai related credit and copyrights goes to OpenAI.
+Author
+Robi750
